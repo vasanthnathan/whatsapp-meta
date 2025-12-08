@@ -169,34 +169,38 @@ VITE_API_BEARER_TOKEN=YOUR_BEARER_TOKEN_HERE
 2. **Create a new Static Site on Render**:
    - Go to [dashboard.render.com](https://dashboard.render.com)
    - Click "New +" → "Static Site"
-   - Connect your GitHub repository
-   - Render will auto-detect the settings from `render.yaml`
+   - Connect your GitHub account and select the `whatsapp-meta` repository
+   - Configure the following settings:
+     - **Name**: `whatsapp-meta` (or any name you prefer)
+     - **Branch**: `master` (or `main` if you renamed it)
+     - **Root Directory**: Leave empty (or `/` if required)
+     - **Build Command**: `npm install && npm run build`
+     - **Publish Directory**: `dist`
 
-3. **Configure Environment Variables**:
-   - In the Render dashboard, go to your service → Environment
-   - Add the following environment variables:
-     - `VITE_API_BASE_URL`: Your Meta API base URL
-       ```
-       https://graph.facebook.com/v18.0/YOUR_PHONE_NUMBER_ID/messages
-       ```
-     - `VITE_VERIFY_TOKEN`: Your Meta WhatsApp Bearer Token
-       ```
-       YOUR_BEARER_TOKEN_HERE
-       ```
+3. **Configure Environment Variables** (IMPORTANT - Do this BEFORE deploying):
+   - Scroll down to "Environment Variables" section
+   - Click "Add Environment Variable" and add:
+     - **Key**: `VITE_API_BASE_URL`
+       **Value**: `https://graph.facebook.com/v18.0/YOUR_PHONE_NUMBER_ID/messages`
+     - **Key**: `VITE_VERIFY_TOKEN`
+       **Value**: `YOUR_BEARER_TOKEN_HERE`
+   - ⚠️ **Important**: Add these BEFORE clicking "Create Static Site"
 
 4. **Deploy**:
    - Click "Create Static Site"
    - Render will build and deploy your app
    - You'll get a URL like `https://whatsapp-meta.onrender.com`
+   - The build process will take a few minutes
 
-### Render Configuration
+### Troubleshooting
 
-The project includes a `render.yaml` file that configures:
-- Build command: `npm install && npm run build`
-- Publish directory: `dist`
-- Static site settings
+If you encounter errors:
+- **Build fails**: Check that all environment variables are set correctly
+- **Environment variables not working**: Make sure they're prefixed with `VITE_` and added before deployment
+- **404 errors**: Verify the Publish Directory is set to `dist`
+- **API errors**: Double-check your `VITE_VERIFY_TOKEN` and `VITE_API_BASE_URL` values
 
-**Note**: After adding environment variables, you may need to trigger a manual redeploy for them to take effect.
+**Note**: If you need to add/update environment variables after deployment, go to your service → Environment, add/update them, and click "Manual Deploy" → "Clear build cache & deploy".
 
 ## Notes
 
