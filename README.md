@@ -195,10 +195,15 @@ VITE_API_BEARER_TOKEN=YOUR_BEARER_TOKEN_HERE
 ### Troubleshooting
 
 If you encounter errors:
+
 - **Build fails**: Check that all environment variables are set correctly
 - **Environment variables not working**: Make sure they're prefixed with `VITE_` and added before deployment
 - **404 errors**: Verify the Publish Directory is set to `dist`
 - **API errors**: Double-check your `VITE_VERIFY_TOKEN` and `VITE_API_BASE_URL` values
+- **MIME type errors / Asset loading errors**: 
+  - Make sure you're using the latest code (the `base: './'` configuration in `vite.config.js` should fix this)
+  - After updating, trigger a manual redeploy with "Clear build cache & deploy"
+  - If issues persist, try deleting and recreating the static site
 
 **Note**: If you need to add/update environment variables after deployment, go to your service → Environment, add/update them, and click "Manual Deploy" → "Clear build cache & deploy".
 
