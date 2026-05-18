@@ -86,6 +86,100 @@ export const templates = [
       "You have a {{service_name}} appointment at {{business_name}} on {{appointment_datetime}}. Auto message, replies not monitored.",
     placeholders: ["service_name", "business_name", "appointment_datetime"],
   },
+  {
+    id: "simple_reminder_spanish",
+    name: "Simple Reminder in Spanish",
+    templateName: "simple_reminder_spanish",
+    message:
+      "Tiene una cita para {{service_name}} en {{business_name}} el {{appointment_datetime}}. Mensaje automático, las respuestas no son monitoreadas.",
+    placeholders: ["service_name", "business_name", "appointment_datetime"],
+  },
+  {
+    id: "simple_reminder_french",
+    name: "Simple Reminder in French",
+    templateName: "simple_reminder_french",
+    message:
+      "Vous avez un rendez-vous pour {{ServiceName}} chez {{BusinessName}} le {{AppointmentDateTime}}. Message automatique, les réponses ne sont pas surveillées.",
+    placeholders: ["service_name", "business_name", "appointment_datetime"],
+  },
+  {
+    id: "staff_specific_reminder_english",
+    name: "Staff Specific Reminder in English",
+    templateName: "staff_specific_reminder_english",
+    message:
+      "This is a reminder for your upcoming {{service_name}} appointment with {{staff_name}} at {{business_name}} on {{appointment_datetime}}. Auto message, replies not monitored.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
+  {
+    id: "staff_specific_reminder_spanish",
+    name: "Staff Specific Reminder in Spanish",
+    templateName: "staff_specific_reminder_spanish",
+    message:
+      "Este es un recordatorio para su próxima cita para {{service_name}} con {{staff_name}} en {{business_name}} el {{appointment_datetime}}. Mensaje automático, las respuestas no son monitoreadas.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
+  {
+    id: "staff_specific_reminder_french",
+    name: "Staff Specific Reminder in French",
+    templateName: "staff_specific_reminder_french",
+    message:
+      "Ceci est un rappel pour votre prochain rendez-vous de {{service_name}} avec {{staff_name}} chez {{business_name}} le {{appointment_datetime}}. Message automatique, les réponses ne sont pas surveillées.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
+  {
+    id: "compact_reminder_english",
+    name: "Compact Reminder in English",
+    templateName: "compact_reminder_english",
+    message:
+      "Hi, your {{service_name}} appointment with {{staff_name}} at {{business_name}} is at {{appointment_datetime}}. Auto message, replies not monitored.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
+  {
+    id: "compact_reminder_spanish",
+    name: "Compact Reminder in Spanish",
+    templateName: "compact_reminder_spanish",
+    message:
+      "Hola, su cita para {{service_name}} con {{staff_name}} en {{business_name}} es el {{appointment_datetime}}. Mensaje automático, las respuestas no son monitoreadas.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
+  {
+    id: "compact_reminder_french",
+    name: "Compact Reminder in French",
+    templateName: "compact_reminder_french",
+    message:
+      "Bonjour, votre rendez-vous pour {{service_name}} avec {{staff_name}} chez {{business_name}} est prévu le {{appointment_datetime}}. Message automatique, les réponses ne sont pas surveillées.",
+    placeholders: [
+      "service_name",
+      "staff_name",
+      "business_name",
+      "appointment_datetime",
+    ],
+  },
 ];
 
 export const API_CONFIG = {
