@@ -81,6 +81,7 @@ export const templates = [
   {
     id: "simple_reminder_english",
     name: "Simple Reminder in English",
+    language: "en",
     templateName: "simple_reminder_english",
     message:
       "You have a {{service_name}} appointment at {{business_name}} on {{appointment_datetime}}. Auto message, replies not monitored.",
@@ -105,6 +106,7 @@ export const templates = [
   {
     id: "staff_specific_reminder_english",
     name: "Staff Specific Reminder in English",
+    language: "en",
     templateName: "staff_specific_reminder_english",
     message:
       "This is a reminder for your upcoming {{service_name}} appointment with {{staff_name}} at {{business_name}} on {{appointment_datetime}}. Auto message, replies not monitored.",
@@ -118,6 +120,7 @@ export const templates = [
   {
     id: "staff_specific_reminder_spanish",
     name: "Staff Specific Reminder in Spanish",
+    language: "es",
     templateName: "staff_specific_reminder_spanish",
     message:
       "Este es un recordatorio para su próxima cita para {{service_name}} con {{staff_name}} en {{business_name}} el {{appointment_datetime}}. Mensaje automático, las respuestas no son monitoreadas.",
@@ -131,6 +134,7 @@ export const templates = [
   {
     id: "staff_specific_reminder_french",
     name: "Staff Specific Reminder in French",
+    language: "fr",
     templateName: "staff_specific_reminder_french",
     message:
       "Ceci est un rappel pour votre prochain rendez-vous de {{service_name}} avec {{staff_name}} chez {{business_name}} le {{appointment_datetime}}. Message automatique, les réponses ne sont pas surveillées.",
@@ -144,6 +148,7 @@ export const templates = [
   {
     id: "compact_reminder_english",
     name: "Compact Reminder in English",
+    language: "en",
     templateName: "compact_reminder_english",
     message:
       "Hi, your {{service_name}} appointment with {{staff_name}} at {{business_name}} is at {{appointment_datetime}}. Auto message, replies not monitored.",
@@ -157,6 +162,7 @@ export const templates = [
   {
     id: "compact_reminder_spanish",
     name: "Compact Reminder in Spanish",
+    language: "es",
     templateName: "compact_reminder_spanish",
     message:
       "Hola, su cita para {{service_name}} con {{staff_name}} en {{business_name}} es el {{appointment_datetime}}. Mensaje automático, las respuestas no son monitoreadas.",
@@ -170,6 +176,7 @@ export const templates = [
   {
     id: "compact_reminder_french",
     name: "Compact Reminder in French",
+    language: "fr",
     templateName: "compact_reminder_french",
     message:
       "Bonjour, votre rendez-vous pour {{service_name}} avec {{staff_name}} chez {{business_name}} est prévu le {{appointment_datetime}}. Message automatique, les réponses ne sont pas surveillées.",
